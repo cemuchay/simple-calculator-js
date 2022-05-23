@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalculatorApp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="body">
+
+    <h1>SIMPLE CALCULATOR</h1>
+
+
+    <div>
+        <h3 class="darkmode-toggler-text">
+            Dark Mode
+        </h3>
+
+        <label class="darkmode-toggler">
+            <input onclick="checkDarkToggler()" id="checkAddress" type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
+    <div class="calculator-body">
+        <div id="primary-display" class="primary-display">
+            <div id="primary-display-value"> </div>
+        </div>
+        <div id="secondary-display" class="secondary-display">
+            <div id="secondary-display-value"> </div>
+        </div>
+
+        <div class="button-group">
+            <button onclick="clearPress()" value="clear"> <span class="row1">CLR</span> </button>
+            <button onclick="deletePress()" value="delete"> <span class="row1"> DEL</span> </button>
+            <button value="sqrt"> <span class="row1"> SQRT </span> </button>
+            <button value="raisedto"> <span class="row1"> ^ </span> </button>
+        </div>
+
+        <div class="button-group">
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>/</button>
+        </div>
+
+        <div class="button-group">
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>*</button>
+        </div>
+
+        <div class="button-group">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>-</button>
+        </div>
+
+        <div class="button-group">
+            <button>.</button>
+            <button>0</button>
+            <button>=</button>
+            <button>+</button>
+        </div>
+
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
