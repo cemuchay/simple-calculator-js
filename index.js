@@ -1,20 +1,33 @@
-const displayValues = []
+let displayValues = []
 let currrentValue = ['0']
 let result = 0
 let operand = ''
+
 // add event listener to each button
 document.querySelectorAll("button").forEach(button => {
     const primaryDisplay = document.querySelector("#primary-display-value");
     const secondaryDisplay = document.querySelector("#secondary-display-value");
 
     button.addEventListener("click", () => {
+        buttonValue = button.textContent
+
+        if (buttonValue == 'CLR') {
+            currrentValue = ['0']
+            displayValues = []
+            primaryDisplay.textContent = '0'
+            secondaryDisplay.textContent = ''
+            return
+        }
 
         displayValues.push(button.textContent)
         primaryDisplay.textContent = displayValues.join('')
         currentValueFloat = parseFloat(currrentValue.join(''))
-        buttonValue = button.textContent
+       
 
-        if (button.textContent == '=') {
+
+
+
+        if (buttonValue == '=') {
 
             if (operand == '+') {
                 result += currentValueFloat
@@ -61,20 +74,8 @@ document.querySelectorAll("button").forEach(button => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 // function to change background to dark class
-checkDarkToggler = () => {
+document.querySelector("#checkAddress").addEventListener('click', () => {
     let bodyDark = document.body;
     bodyDark.classList.toggle("dark-mode");
-}
+});
